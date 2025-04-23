@@ -43,6 +43,12 @@ exports.getBookById = async (req, res) => {
 
 // Update a book
 //  method [ put] : http://localhost:5000/api/books/:id
+// {
+//     "title": "java programming",
+//     "author": "tejas sonawane",
+//     "publishedYear": 2024,
+//     "genre": "Fiction"
+//   }
 exports.updateBook = async (req, res) => {
   try {
     const updatedBook = await Book.findByIdAndUpdate(req.params.id, req.body, {
